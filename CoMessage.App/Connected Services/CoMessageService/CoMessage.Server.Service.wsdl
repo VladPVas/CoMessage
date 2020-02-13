@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="CoMessage.Server.Service" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="CoMessage.Server.Service" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="CoMessage.Server.Service/Imports">
+      <xsd:import namespace="CoMessage.Server.Service" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/CoMessage.Model.Common" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/CoMessage.Model.Common.OperationResults" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System.Drawing" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICoMessageService_SendMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMessage" />
+  </wsdl:message>
+  <wsdl:message name="ICoMessageService_SendMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICoMessageService_EditMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditMessage" />
+  </wsdl:message>
+  <wsdl:message name="ICoMessageService_EditMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICoMessageService_GetChatMessagesOfUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChatMessagesOfUser" />
+  </wsdl:message>
+  <wsdl:message name="ICoMessageService_GetChatMessagesOfUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChatMessagesOfUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICoMessageService_ChatHasUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChatHasUser" />
+  </wsdl:message>
+  <wsdl:message name="ICoMessageService_ChatHasUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChatHasUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICoMessageService_Signup_InputMessage">
+    <wsdl:part name="parameters" element="tns:Signup" />
+  </wsdl:message>
+  <wsdl:message name="ICoMessageService_Signup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SignupResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICoMessageService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="ICoMessageService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICoMessageService_Logout_InputMessage">
+    <wsdl:part name="parameters" element="tns:Logout" />
+  </wsdl:message>
+  <wsdl:message name="ICoMessageService_Logout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICoMessageService_ReceiveMessage_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ReceiveMessage" />
+  </wsdl:message>
+  <wsdl:message name="ICoMessageService_DeleteMessage_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMessage" />
+  </wsdl:message>
+  <wsdl:message name="ICoMessageService_ServiceNotify_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ServiceNotify" />
+  </wsdl:message>
+  <wsdl:portType msc:usingSession="true" name="ICoMessageService">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="SendMessage">
+      <wsdl:input wsaw:Action="CoMessage.Server.Service/ICoMessageService/SendMessage" message="tns:ICoMessageService_SendMessage_InputMessage" />
+      <wsdl:output wsaw:Action="CoMessage.Server.Service/ICoMessageService/SendMessageResponse" message="tns:ICoMessageService_SendMessage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="EditMessage">
+      <wsdl:input wsaw:Action="CoMessage.Server.Service/ICoMessageService/EditMessage" message="tns:ICoMessageService_EditMessage_InputMessage" />
+      <wsdl:output wsaw:Action="CoMessage.Server.Service/ICoMessageService/EditMessageResponse" message="tns:ICoMessageService_EditMessage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetChatMessagesOfUser">
+      <wsdl:input wsaw:Action="CoMessage.Server.Service/ICoMessageService/GetChatMessagesOfUser" message="tns:ICoMessageService_GetChatMessagesOfUser_InputMessage" />
+      <wsdl:output wsaw:Action="CoMessage.Server.Service/ICoMessageService/GetChatMessagesOfUserResponse" message="tns:ICoMessageService_GetChatMessagesOfUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="ChatHasUser">
+      <wsdl:input wsaw:Action="CoMessage.Server.Service/ICoMessageService/ChatHasUser" message="tns:ICoMessageService_ChatHasUser_InputMessage" />
+      <wsdl:output wsaw:Action="CoMessage.Server.Service/ICoMessageService/ChatHasUserResponse" message="tns:ICoMessageService_ChatHasUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="Signup">
+      <wsdl:input wsaw:Action="CoMessage.Server.Service/ICoMessageService/Signup" message="tns:ICoMessageService_Signup_InputMessage" />
+      <wsdl:output wsaw:Action="CoMessage.Server.Service/ICoMessageService/SignupResponse" message="tns:ICoMessageService_Signup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="Login">
+      <wsdl:input wsaw:Action="CoMessage.Server.Service/ICoMessageService/Login" message="tns:ICoMessageService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="CoMessage.Server.Service/ICoMessageService/LoginResponse" message="tns:ICoMessageService_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="Logout">
+      <wsdl:input wsaw:Action="CoMessage.Server.Service/ICoMessageService/Logout" message="tns:ICoMessageService_Logout_InputMessage" />
+      <wsdl:output wsaw:Action="CoMessage.Server.Service/ICoMessageService/LogoutResponse" message="tns:ICoMessageService_Logout_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="ReceiveMessage">
+      <wsdl:output wsaw:Action="CoMessage.Server.Service/ICoMessageService/ReceiveMessage" message="tns:ICoMessageService_ReceiveMessage_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="DeleteMessage">
+      <wsdl:output wsaw:Action="CoMessage.Server.Service/ICoMessageService/DeleteMessage" message="tns:ICoMessageService_DeleteMessage_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="ServiceNotify">
+      <wsdl:output wsaw:Action="CoMessage.Server.Service/ICoMessageService/ServiceNotify" message="tns:ICoMessageService_ServiceNotify_OutputCallbackMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

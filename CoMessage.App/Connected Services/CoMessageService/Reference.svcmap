@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d9f8861c-01ac-452e-bbca-9c5975ba125a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="net.tcp://localhost:9990/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CoMessage.Server.Service.wsdl" MetadataType="Wsdl" ID="85ec1234-9ed0-4994-99d0-8a0b0f7ddc4e" SourceId="1" SourceUrl="net.tcp://localhost:9990/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="c9b85754-9245-4258-9cd7-6627c560ff0a" SourceId="1" SourceUrl="net.tcp://localhost:9990/mex" />
+    <MetadataFile FileName="CoMessage.Server.Service.xsd" MetadataType="Schema" ID="5f35ca8d-058f-4219-8f46-7a137b82d1e2" SourceId="1" SourceUrl="net.tcp://localhost:9990/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="43a74b85-a461-4e31-945d-28a82b073981" SourceId="1" SourceUrl="net.tcp://localhost:9990/mex" />
+    <MetadataFile FileName="CoMessage.Model.Common.xsd" MetadataType="Schema" ID="4a7ac443-8f30-4d6d-b738-e5269df1601d" SourceId="1" SourceUrl="net.tcp://localhost:9990/mex" />
+    <MetadataFile FileName="CoMessage.Model.Common.OperationResults.xsd" MetadataType="Schema" ID="b0e50588-39b3-4591-b547-93a6c3ff46e6" SourceId="1" SourceUrl="net.tcp://localhost:9990/mex" />
+    <MetadataFile FileName="System.Drawing.xsd" MetadataType="Schema" ID="fbb315e4-849c-4008-b961-b86a90c4cc16" SourceId="1" SourceUrl="net.tcp://localhost:9990/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

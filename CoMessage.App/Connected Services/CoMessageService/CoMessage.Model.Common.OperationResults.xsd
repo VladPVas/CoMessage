@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/CoMessage.Model.Common.OperationResults" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CoMessage.Model.Common.OperationResults" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/CoMessage.Model.Common" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:simpleType name="OperationCode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Success" />
+      <xs:enumeration value="E_Unknown" />
+      <xs:enumeration value="E_SendToYourself" />
+      <xs:enumeration value="E_LoginNotFound" />
+      <xs:enumeration value="E_LoginOrPasswordNotFound" />
+      <xs:enumeration value="E_LoginAlreadyExist" />
+      <xs:enumeration value="E_UserNotFound" />
+      <xs:enumeration value="E_ContactNotFound" />
+      <xs:enumeration value="E_ChatNotFound" />
+      <xs:enumeration value="E_ChatHasNoUsers" />
+      <xs:enumeration value="E_NoSession" />
+      <xs:enumeration value="E_RequiredDataIsNull" />
+      <xs:enumeration value="E_MessageNotFound" />
+      <xs:enumeration value="E_MessageAlreadyExist" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="OperationCode" nillable="true" type="tns:OperationCode" />
+  <xs:complexType name="MessageArrayResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultTOfArrayOfMessagegNOnLe8O">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MessageArrayResult" nillable="true" type="tns:MessageArrayResult" />
+  <xs:complexType name="OperationResultTOfArrayOfMessagegNOnLe8O">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultTOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/CoMessage.Model.Common.OperationResults" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfMessage" Namespace="http://schemas.datacontract.org/2004/07/CoMessage.Model.Common">
+          </GenericParameter>
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" type="tns:OperationCode" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/CoMessage.Model.Common" minOccurs="0" name="Result" nillable="true" type="q1:ArrayOfMessage" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultTOfArrayOfMessagegNOnLe8O" nillable="true" type="tns:OperationResultTOfArrayOfMessagegNOnLe8O" />
+  <xs:complexType name="GuidResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResultTOfguid">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GuidResult" nillable="true" type="tns:GuidResult" />
+  <xs:complexType name="OperationResultTOfguid">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultTOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/CoMessage.Model.Common.OperationResults" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="guid" Namespace="http://schemas.microsoft.com/2003/10/Serialization/">
+          </GenericParameter>
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" type="tns:OperationCode" />
+      <xs:element minOccurs="0" name="Result" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultTOfguid" nillable="true" type="tns:OperationResultTOfguid" />
+</xs:schema>

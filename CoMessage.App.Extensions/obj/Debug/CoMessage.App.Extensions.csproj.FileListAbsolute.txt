@@ -1,0 +1,5 @@
+P:\Projects\NameBy\CoMessage\CoMessage\CoMessage.App.Extensions\bin\Debug\CoMessage.App.Extensions.dll
+P:\Projects\NameBy\CoMessage\CoMessage\CoMessage.App.Extensions\bin\Debug\CoMessage.App.Extensions.pdb
+P:\Projects\NameBy\CoMessage\CoMessage\CoMessage.App.Extensions\obj\Debug\CoMessage.App.Extensions.dll
+P:\Projects\NameBy\CoMessage\CoMessage\CoMessage.App.Extensions\obj\Debug\CoMessage.App.Extensions.pdb
+P:\Projects\NameBy\CoMessage\CoMessage\CoMessage.App.Extensions\obj\Debug\CoMessage.App.Extensions.csprojAssemblyReference.cache
